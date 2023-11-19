@@ -29,7 +29,7 @@ const controller = {
           { expiresIn: "10m" }
         );
 
-        const resetLink = `http://localhost:3000/api/auth/setResetPassword/${user._id}/${token}`;
+        const resetLink = `https://apiespaceprosocial.onrender.com/api/auth/setResetPassword/${user._id}/${token}`;
         let errorMessage =
           "Veuillez consulter votre boîte mail pour changer votre mot de passe";
         ///////send mail//////////
