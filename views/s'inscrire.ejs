@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <title>Espace Pro Social</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .containerRegister {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+    }
+
+    .register {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .title {
+      padding: 20px;
+    }
+    .register form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .register form input {
+      width: 300px;
+      height: 40px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .register form input[type="submit"] {
+      background-color: #000;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .back {
+      position: absolute;
+      top: 40px;
+      left: 40px;
+    }
+  </style>
+  <body>
+    <section class="containerRegister">
+      <div class="register">
+        <div class="title">
+          <h1>S'inscrire</h1>
+        </div>
+        <a class="back" href="/"
+          ><span class="material-symbols-outlined"> arrow_back_ios </span></a
+        >
+        <form method="post" enctype="multipart/form-data">
+          <label for="userName">Nom d'utilisateur :</label>
+          <input type="text" id="userName" name="userName" placeholder="Nom d'utilisateur" />
+          <label for="birthday">Date de naissance :</label>
+          <input type="date" id="birthday" value="2023-01-01" />
+          <label for="email">Email :</label>
+          <input type="text" id="email" name="email" placeholder="Email" />
+          <label for="avatar">Photo de profil :</label>
+          <input type="file" id="avatar" name="image"/>
+          <label for="password">Mot de passe :</label>
+          <input type="password" id="password" name="password" placeholder="Mot de passe" />
+          <input type="submit" value="S'inscrire" />
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
