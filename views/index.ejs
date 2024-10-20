@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Espace Pro Social</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #f2f2f2;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100vw;
+    }
+    .logo {
+      width: 70%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .logo img {
+      width: 60vw;
+      border-radius: 5%;
+    }
+    .register {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .register form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .register form input {
+      width: 300px;
+      height: 40px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .register form input[type="submit"] {
+      background-color: #000;
+      color: #fff;
+      cursor: pointer;
+    }
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    .links a:hover {
+      color: #8a8787;
+      scale: 1.05;
+    }
+    p {
+      color: red;
+      font-size: 1.2rem;
+    }
+  </style>
+  <body>
+    <section class="container">
+      <div class="logo">
+        <img src="/home-logo.jpg" alt="" />
+      </div>
+      <div class="register">
+        <form action="/api/auth/login" method="POST">
+          <label for="email">Email :</label>
+          <input type="text" id="email" name="email" placeholder="Email" />
+          <label for="password">Mot de passe :</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Mot de passe"
+          />
+          <input type="submit" value="Se connecter" />
+          <div class="links">
+            <a href="/api/auth/register">S'inscrire</a>
+            <a href="/api/auth/password">Mot de passe oublié ?</a>
+            <p><% if (errorMessage) { %> <%- errorMessage %> <% } %></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
