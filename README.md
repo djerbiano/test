@@ -47,3 +47,4 @@ Il reste néanmoins en ligne à des fins de démonstration de ma motivation, de 
 - 🧼 Validation des champs via Joi
 - 🖋️ UI stylisée avec Styled Components
 - 🧠 Backend structuré avec Express et MongoDB (Mongoose)
+
